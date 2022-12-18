@@ -176,7 +176,8 @@ namespace Aerolineas
         {
             this.odjOper.nuevoCliente(this.txtCedula.Text, this.txtNombre.Text);
             Cliente cliente = this.odjOper.getClienteName();
-            MessageBox.Show("\n"+"Nombre: "+ cliente.Cedula + "\n\n"+ "Cedula: " + cliente.NombreCompleto + "\n\n"+"Precio Final: "+ this.odjOper.PrecioFinal,"\n"+ "Facturacion del Viaje");
+            MessageBox.Show("\n"+"Cedula: "+ cliente.Cedula + "\n"+ "Cliente: " + cliente.NombreCompleto + "\n"+ "Destino:"+ this.cbxDestino.SelectedItem.ToString()+"\n"+"Aerolinea:"+ this.cbxAerolineas.SelectedItem.ToString() + "\n" + 
+             "Precio tiquete:" + this.odjOper.PrecioTiquete +"\n" + "Precio con servicio:" + this.odjOper.PrecioServicio + "\n"+ "IVA:"+ this.odjOper.IVA +  "\n" + "Precio Final: "+ this.odjOper.PrecioFinal+ "\n GRACIAS POR SU COMPRA","Facturacion del Viaje");
         }
         private void InsertDataUser()
         {
