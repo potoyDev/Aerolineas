@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Class1
+    public class Tiquete
     {
 
 
-        public double PrecioTiquete { get; set; }
+        public decimal PrecioTiquete { get; set; }
 
-        public double IVA { get; set; }
-        public double PrecioServicio { get; set; }
-        public double PrecioFinal { get; set; }
+        public decimal IVA { get; set; }
+        public decimal PrecioServicio { get; set; }
+        public decimal PrecioFinal { get; set; }
 
 
         private Cliente objcliente = new Cliente();
@@ -29,17 +29,17 @@ namespace BLL
         }
 
 
-        public double CalcularServicio(double Tarifa)
+        public decimal CalcularServicio(decimal Tarifa)
         {
             return this.PrecioTiquete + (this.PrecioTiquete * Tarifa);
         }
 
-        public double CalcularIVA()
+        public decimal CalcularIVA()
         {
-            return  (this.PrecioServicio * 0.13);
+            return (this.PrecioServicio * decimal.Parse("0,13"));
         }
 
-        public double CalcularPrecioFinal()
+        public decimal CalcularPrecioFinal()
         {
             return this.PrecioServicio + CalcularIVA();
         }

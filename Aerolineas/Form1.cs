@@ -15,7 +15,7 @@ namespace Aerolineas
 {
     public partial class Form1 : Form
     {
-        private Class1 odjOper = new Class1();
+        private Tiquete odjOper = new Tiquete();
         private Conection objConnection = new Conection();
         
         private object cbxAerolinea;
@@ -89,30 +89,30 @@ namespace Aerolineas
                 { 
                     case "Avianca 24%":
                         
-                        this.odjOper.PrecioTiquete = double.Parse(this.txtPTiquete.Text);
-                        this.odjOper.PrecioServicio =  this.odjOper.CalcularServicio(0.24);
+                        this.odjOper.PrecioTiquete = decimal.Parse(this.txtPTiquete.Text);
+                        this.odjOper.PrecioServicio =  this.odjOper.CalcularServicio(decimal.Parse("0,24"));
                         this.txtPServicio.Text = this.odjOper.PrecioServicio.ToString();
             
                         break;
 
                     case "Despegar 18%":
-                        this.odjOper.PrecioTiquete = double.Parse(this.txtPTiquete.Text);
-                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(0.18);
+                        this.odjOper.PrecioTiquete = decimal.Parse(this.txtPTiquete.Text);
+                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(decimal.Parse("0,18"));
                         this.txtPServicio.Text = this.odjOper.PrecioServicio.ToString();
                         break;
                     case "American Airlines 32%":
-                        this.odjOper.PrecioTiquete = double.Parse(this.txtPTiquete.Text);
-                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(0.32);
+                        this.odjOper.PrecioTiquete = decimal.Parse(this.txtPTiquete.Text);
+                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(decimal.Parse("0,32"));
                         this.txtPServicio.Text = this.odjOper.PrecioServicio.ToString();
                         break;
                     case "Japan Airlines 25%":
-                        this.odjOper.PrecioTiquete = double.Parse(this.txtPTiquete.Text);
-                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(0.25);
+                        this.odjOper.PrecioTiquete = decimal.Parse(this.txtPTiquete.Text);
+                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(decimal.Parse("0,25"));
                         this.txtPServicio.Text = this.odjOper.PrecioServicio.ToString();
                         break;
                     case "Qatar Airways 27%":
-                        this.odjOper.PrecioTiquete = double.Parse(this.txtPTiquete.Text);
-                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(0.27);
+                        this.odjOper.PrecioTiquete = decimal.Parse(this.txtPTiquete.Text);
+                        this.odjOper.PrecioServicio = this.odjOper.CalcularServicio(decimal.Parse("0,27"));
                         this.txtPServicio.Text = this.odjOper.PrecioServicio.ToString();
                         break;
                     
@@ -121,7 +121,7 @@ namespace Aerolineas
             }
             catch (Exception error)
             {
-
+                throw new Exception(error.ToString());
             }
         }
         private void cbxAerolineas_SelectedIndexChanged(object sender, EventArgs e)

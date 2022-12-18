@@ -33,6 +33,9 @@ namespace DAL
                 this.connection = new SqlConnection(this.stringConexion);
                 //se intentode abrir la conexion
                 this.connection.Open();
+                // esto es el commit
+                //esto es otro commit jeje
+                //otro cambio
                 // se debe de instanciar un comando
                 this.command = new SqlCommand();
                 //se debe asignar la conexion
