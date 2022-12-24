@@ -133,6 +133,16 @@ namespace Aerolineas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap j0432537 {
+            get {
+                object obj = ResourceManager.GetObject("j0432537", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap j0432634 {
             get {
                 object obj = ResourceManager.GetObject("j0432634", resourceCulture);

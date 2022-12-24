@@ -49,7 +49,7 @@ namespace DAL
                 // montoIva = montoIva.Replace(",", ".");
                 //montoIVA = int.Parse(montoIva, CultureInfo.InvariantCulture);
 
-                string prueba1 = $"values('{cedCliente}', '{destino}', '{aerolinea}',{precio},{montoService},{montoIVA},{PrecioTotal}";
+                string prueba1 = $"values('{cedCliente}', '{destino}', '{aerolinea}',{precio},{montoService},{montoIVA},{PrecioTotal}";                            
 
                 // Los double no se ponen en '' simples porque sino serian varchar 
                 this.command.CommandText = $"insert into Tiquetes(cedCliente,destino,aerolinea,precio,montoServicio,montoIva,precioTotal)values('{cedCliente}', '{destino}', '{aerolinea}',{precio},{montoService},{montoIVA},{PrecioTotal})";
@@ -63,6 +63,9 @@ namespace DAL
 
 
                 }
+                this.command.Connection.Close();
+                this.command.Dispose();
+                this.connection.Dispose();
                 return _inserData;
 
             }

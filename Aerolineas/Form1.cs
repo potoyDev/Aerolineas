@@ -264,6 +264,11 @@ namespace Aerolineas
                 MessageBox.Show(error.Message, "Informacion Erronea", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
 
